@@ -17,9 +17,9 @@ export function Calendar() {
   ]
 
   return (
-    <div className='relative w-90 uppercase'>
+    <div className='relative w-90 max-w-full min-w-0 uppercase'>
       <div aria-hidden className='pointer-events-none absolute inset-0 flex'>
-        <span className='absolute -right-10 -bottom-16 select-none font-black text-[240px] leading-none tracking-tighter text-white/4'>
+        <span className='absolute right-0 -bottom-16 select-none font-black text-[240px] leading-none tracking-tighter text-white/4'>
           {String(month + 1)}
         </span>
       </div>

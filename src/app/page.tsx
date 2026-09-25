@@ -9,9 +9,6 @@ export default function Page() {
     <InvestigateProvider>
       <div className='flex min-h-screen px-4 py-6'>
         <div className='fixed inset-0 -z-10 pointer-events-none bg-grid opacity-70' aria-hidden />
-        <div className='absolute z-0 right-10 bottom-30'>
-          <Calendar />
-        </div>
         <div className='bg-[#101010] relative flex flex-col w-full mx-auto max-w-5xl md:px-6 py-6 border border-white/30 shadow-[10px_-10px_0_rgba(255,255,255,0.08)] backdrop-blur-sm'>
           <div className='-skew-x-1 absolute -top-5 right-5 z-20'>
             <ViewCounter count={0} />
@@ -23,7 +20,7 @@ export default function Page() {
                 aria-hidden
               />
               <div
-                className='animate-[spin_4s_linear_infinite_reverse] absolute -inset-2 rotate-3 border border-white/15'
+                className='animate-[spin_4s_linear_infinite_reverse] absolute -inset- rotate-3 border border-white/15'
                 aria-hidden
               />
               <div className='shadow-[-10px_-2px_0_rgba(255,255,255,0.08)]'>
@@ -48,7 +45,12 @@ export default function Page() {
               </p>
             </div>
           </div>
-          <ListTechnologies />
+          <div className='m-5'>
+            <ListTechnologies />
+          </div>
+          <div className='flex justify-end m-5'>
+            <Calendar />
+          </div>
         </div>
       </div>
     </InvestigateProvider>

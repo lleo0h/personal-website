@@ -5,7 +5,7 @@ const technologies = ['React', 'Next.js', 'TypeScript', 'Tailwind', 'Docker', 'P
 export function ListTechnologies() {
   return (
     <div className='flex'>
-      <div className='relative flex flex-col m-5'>
+      <div className='relative flex flex-col'>
         <span className='px-5'>TECS USADA POR MIM:</span>
         <div
           aria-hidden='true'
