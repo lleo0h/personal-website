@@ -32,7 +32,7 @@ export function Calendar() {
         {days.map((day, index) => (
           <div key={index} className='flex aspect-square items-center justify-center italic'>
             {currentDay === day ? (
-              <span className='flex size-9 items-center justify-center rounded-full bg-white text-black'>
+              <span className='selection:bg-black selection:text-white flex size-9 items-center justify-center rounded-full bg-white text-black'>
                 {day}
               </span>
             ) : (

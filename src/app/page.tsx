@@ -9,7 +9,7 @@ export default function Page() {
     <InvestigateProvider>
       <div className='flex min-h-screen px-4 py-6'>
         <div className='fixed inset-0 -z-10 pointer-events-none bg-grid opacity-70' aria-hidden />
-        <div className='bg-[#101010] relative flex flex-col w-full mx-auto max-w-5xl md:px-6 py-6 border border-white/30 shadow-[10px_-10px_0_rgba(255,255,255,0.08)] backdrop-blur-sm'>
+        <div className='bg-[#101010] relative flex flex-col w-full mx-auto max-w-5xl py-6 border border-white/30 shadow-[10px_-10px_0_rgba(255,255,255,0.08)] backdrop-blur-sm'>
           <div className='-skew-x-1 absolute -top-5 right-5 z-20'>
             <ViewCounter count={0} />
           </div>
