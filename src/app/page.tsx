@@ -48,7 +48,7 @@ export default function Page() {
           <div className='m-5'>
             <ListTechnologies />
           </div>
-          <div className='flex justify-end m-5'>
+          <div className='flex justify-end my-5 mx-10'>
             <Calendar />
           </div>
         </div>
