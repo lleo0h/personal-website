@@ -1,3 +1,5 @@
+'use client'
+
 function getDaysInMonth(year: number, month: number) {
   return new Date(year, month, 0).getDate()
 }
@@ -10,7 +12,6 @@ export function Calendar() {
   const totalDays = getDaysInMonth(year, month + 1)
   const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
   const firstWeekday = new Date(year, month, 1).getDay()
-
   const days: (number | null)[] = [
     ...Array.from({ length: firstWeekday }, () => null),
     ...Array.from({ length: totalDays }, (_, i) => i + 1)

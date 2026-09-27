@@ -90,6 +90,7 @@ export function InvestigateDialog({ name, message, sprite_path }: InvestigateDia
           height={560}
           className='h-48 w-auto max-w-none'
           loading='eager'
+          priority
         />
       </div>
       <div className='flex flex-col gap-1'>

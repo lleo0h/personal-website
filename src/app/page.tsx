@@ -30,7 +30,7 @@ export default function Page() {
                   alt='foto de perfil'
                   width={144}
                   height={144}
-                  priority
+                  loading='eager'
                 />
               </div>
               <span className='z-10 absolute -bottom-2 -right-2 bg-white px-2 py-0.5 font-mono text-[8px] font-bold tracking-[0.15em] text-black'>
