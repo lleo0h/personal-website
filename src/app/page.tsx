@@ -1,17 +1,22 @@
 import Image from 'next/image'
+import { connection } from 'next/server'
 import { ViewCounter } from '@/components/view-counter'
 import { ListTechnologies } from '@/components/list-technologies'
 import { InvestigateProvider } from '@/components/investigate'
 import { Calendar } from '@/components/calendar'
+import { getViews } from '@/api-client/clients'
 
-export default function Page() {
+export default async function Page() {
+  await connection()
+  const views = await getViews()
+
   return (
     <InvestigateProvider>
       <div className='flex min-h-screen px-4 py-6'>
         <div className='fixed inset-0 -z-10 pointer-events-none bg-grid opacity-70' aria-hidden />
         <div className='bg-[#101010] relative flex flex-col w-full mx-auto max-w-5xl py-6 border border-white/30 shadow-[10px_-10px_0_rgba(255,255,255,0.08)] backdrop-blur-sm'>
           <div className='-skew-x-1 absolute -top-5 right-5 z-20'>
-            <ViewCounter count={0} />
+            <ViewCounter count={views.data.count} />
           </div>
           <div className='flex items-center gap-5 p-2 m-4'>
             <div className='relative shrink-0'>
@@ -40,8 +45,8 @@ export default function Page() {
             <div>
               <h1 className='text-4xl font-bold'>leo</h1>
               <p className='text-xs leading-5 text-white/70 sm:text-sm'>
-                programador <i className='text-white'>underground</i> full-stack que faz
-                gadgets desde 2022.
+                programador <i className='text-white'>underground</i> full-stack que faz gadgets
+                desde 2022.
               </p>
             </div>
           </div>
