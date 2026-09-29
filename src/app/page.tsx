@@ -40,7 +40,7 @@ export default function Page() {
             <div>
               <h1 className='text-4xl font-bold'>leo</h1>
               <p className='text-xs leading-5 text-white/70 sm:text-sm'>
-                Oi, sou programador <i className='text-white'>underground</i> full-stack que faz
+                programador <i className='text-white'>underground</i> full-stack que faz
                 gadgets desde 2022.
               </p>
             </div>
