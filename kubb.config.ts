@@ -19,6 +19,7 @@ export default defineConfig(async () => {
     plugins: [
       pluginTs(),
       pluginFetch({
+        baseURL: 'http://localhost:3000',
         resolver: {
           name(name) {
             return name.replace(/^(\w+?)Api(?=[A-Z]|$)/, '$1')
