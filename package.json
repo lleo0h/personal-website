@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "oxlint",
-    "fmt": "oxfmt"
+    "fmt": "oxfmt",
+    "db": "drizzle-kit"
   },
   "dependencies": {
     "@elysia/openapi": "^1.4.16",
