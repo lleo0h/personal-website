@@ -20,11 +20,14 @@
     "zod": "^4.6.5"
   },
   "devDependencies": {
+    "@kubb/plugin-fetch": "^5.5.1",
+    "@kubb/plugin-ts": "^5.0.2",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "drizzle-kit": "1.0.0-rc.4",
+    "kubb": "^5.3.19",
     "oxfmt": "^0.70.0",
     "oxlint": "^1.85.0",
     "tailwindcss": "^4",
