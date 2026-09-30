@@ -1,4 +1,6 @@
 import { Elysia } from 'elysia'
-import { incrementViewCount } from '../db'
+import { trackView } from '../views'
 
-export const incrementViews = new Elysia().post('/views', () => incrementViewCount())
+export const incrementViews = new Elysia().post('/views', ({ request }) =>
+  trackView(request.headers)
+)

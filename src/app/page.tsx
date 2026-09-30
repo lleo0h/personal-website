@@ -4,11 +4,12 @@ import { ViewCounter } from '@/components/view-counter'
 import { ListTechnologies } from '@/components/list-technologies'
 import { InvestigateProvider } from '@/components/investigate'
 import { Calendar } from '@/components/calendar'
-import { getViews } from '@/api-client/clients'
+import { trackView } from '@/server/views'
+import { headers } from 'next/headers'
 
 export default async function Page() {
   await connection()
-  const views = await getViews()
+  const { count } = await trackView(await headers())
 
   return (
     <InvestigateProvider>
@@ -16,7 +17,7 @@ export default async function Page() {
         <div className='fixed inset-0 -z-10 pointer-events-none bg-grid opacity-70' aria-hidden />
         <div className='bg-[#101010] relative flex flex-col w-full mx-auto max-w-5xl py-6 border border-white/30 shadow-[10px_-10px_0_rgba(255,255,255,0.08)] backdrop-blur-sm'>
           <div className='-skew-x-1 absolute -top-5 right-5 z-20'>
-            <ViewCounter count={views.data.count} />
+            <ViewCounter count={count} />
           </div>
           <div className='flex items-center gap-5 p-2 m-4'>
             <div className='relative shrink-0'>
