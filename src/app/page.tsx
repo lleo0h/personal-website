@@ -6,6 +6,7 @@ import { InvestigateProvider } from '@/components/investigate'
 import { Calendar } from '@/components/calendar'
 import { trackView } from '@/server/views'
 import { headers } from 'next/headers'
+import { SocialLinks } from '@/components/social-links'
 
 export default async function Page() {
   await connection()
@@ -19,8 +20,8 @@ export default async function Page() {
           <div className='-skew-x-1 absolute -top-5 right-5 z-20'>
             <ViewCounter count={count} />
           </div>
-          <div className='flex items-center gap-5 p-2 m-4'>
-            <div className='relative shrink-0'>
+          <div className='grid grid-cols-[auto_minmax(0,1fr)] items-center gap-x-5 gap-y-7 p-2 m-4 sm:gap-y-2'>
+            <div className='relative shrink-0 sm:row-span-2'>
               <div
                 className='animate-[spin_7s_linear_infinite] absolute -inset-2 rotate-3 border border-white/15'
                 aria-hidden
@@ -43,15 +44,18 @@ export default async function Page() {
                 Lv 3
               </span>
             </div>
-            <div>
+            <div className='min-w-0 sm:self-end'>
               <h1 className='text-4xl font-bold'>leo</h1>
               <p className='text-xs leading-5 text-white/70 sm:text-sm'>
                 programador <i className='text-white'>underground</i> full-stack que faz gadgets
                 desde 2022.
               </p>
             </div>
+            <div className='col-span-2 min-w-0 sm:col-span-1 sm:col-start-2 sm:self-start'>
+              <SocialLinks />
+            </div>
           </div>
-          <div className='m-5'>
+          <div className='flex justify-between m-5'>
             <ListTechnologies />
           </div>
           <div className='flex justify-end my-5 mx-10'>
