@@ -30,3 +30,29 @@
     linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
   mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 100%);
 }
+
+@keyframes cards-fall {
+  0% {
+    transform: translate3d(0, -20vh, 0) rotate(var(--card-rotate));
+  }
+
+  20% {
+    transform: translate3d(calc(var(--card-drift) * 0.15), 10vh, 0)
+      rotate(calc(var(--card-rotate) + var(--card-spin) * 0.2));
+  }
+
+  45% {
+    transform: translate3d(calc(var(--card-drift) * -0.15), 45vh, 0)
+      rotate(calc(var(--card-rotate) + var(--card-spin) * 0.45));
+  }
+
+  70% {
+    transform: translate3d(calc(var(--card-drift) * 0.6), 80vh, 0)
+      rotate(calc(var(--card-rotate) + var(--card-spin) * 0.7));
+  }
+
+  100% {
+    transform: translate3d(var(--card-drift), 120vh, 0)
+      rotate(calc(var(--card-rotate) + var(--card-spin)));
+  }
+}
