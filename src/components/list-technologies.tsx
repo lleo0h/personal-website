@@ -18,9 +18,7 @@ export function ListTechnologies() {
               <li key={i}>
                 <InvestigateArea
                   label={`Investigar ${i}`}
-                  name='Nagito Komaeda'
                   message={`${i}...`}
-                  sprite_path='/sprites/nagito_komaeda_sprite_6.webp'
                   className='rounded-sm block w-full cursor-pointer px-5 text-left uppercase font-bold transition-all duration-150 ease-out hover:bg-white hover:text-black hover:shadow-[5px_-10px_0_rgba(255,255,255,0.08)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white'
                 >
                   {i}
