@@ -47,7 +47,7 @@ export function ListTechnologies() {
               )}
               {category.decoration === 'bars' && (
                 <>
-                  <div className='absolute -rig ht-4 top-0 h-full w-3 rotate-6 bg-white/10 transition-all duration-300 group-hover:right-5 group-hover:bg-black' />
+                  <div className='absolute -right-10 ht-4 top-0 h-full w-3 rotate-6 bg-white/10 transition-all duration-300 group-hover:right-5 group-hover:bg-black' />
                   <div className='absolute -right-10 top-0 h-full w-3 rotate-6 bg-white/5 transition-all delay-75 duration-300 group-hover:right-12 group-hover:bg-black/60' />
                   <div className='absolute -right-16 top-0 h-full w-3 rotate-6 bg-white/5 transition-all delay-100 duration-300 group-hover:right-20 group-hover:bg-black/30' />
                   <div className='absolute bottom-0 left-0 h-5 w-20 bg-white/10 [clip-path:polygon(0_0,100%_0,75%_100%,0_100%)] transition-all duration-300 group-hover:w-36 group-hover:bg-black' />
