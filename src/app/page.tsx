@@ -8,6 +8,7 @@ import { trackView } from '@/server/views'
 import { headers } from 'next/headers'
 import { SocialLinks } from '@/components/social-links'
 import { FallingCards } from '@/components/falling-cards'
+import { Todo } from '@/components/to-do'
 
 export default async function Page() {
   await connection()
@@ -15,9 +16,10 @@ export default async function Page() {
 
   return (
     <InvestigateProvider>
-      <div className='flex min-h-screen px-4 py-6'>
+      <div className='relative isolate flex min-h-screen px-4 py-6'>
         <div className='fixed inset-0 -z-10 pointer-events-none bg-grid opacity-70' aria-hidden />
         <FallingCards />
+        <Todo />
         <div className='bg-[#101010] relative flex flex-col w-full mx-auto max-w-5xl py-6 border border-white/30 shadow-[10px_-10px_0_rgba(255,255,255,0.08)] backdrop-blur-sm'>
           <div className='-skew-x-1 absolute -top-5 right-5 z-20'>
             <ViewCounter count={count} />
@@ -57,13 +59,16 @@ export default async function Page() {
               <SocialLinks />
             </div>
           </div>
-          <div className='flex justify-center mx-5'>
+          <div className='flex justify-center mx-5 mb-10'>
             <ListTechnologies />
           </div>
           <div className='flex justify-end my-5 mx-10'>
             <Calendar />
           </div>
         </div>
+      </div>
+      <div className='flex justify-end p-1'>
+        <span className='font-mono text-sm text-white/30'>feito com next.js</span>
       </div>
     </InvestigateProvider>
   )
