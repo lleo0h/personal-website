@@ -32,9 +32,9 @@ export default async function Page() {
                 className='animate-[spin_4s_linear_infinite_reverse] absolute -inset- rotate-3 border border-white/15'
                 aria-hidden
               />
-              <div className='shadow-[-10px_-2px_0_rgba(255,255,255,0.08)]'>
+              <div className='relative z-0 transition-transform duration-300 hover:scale-115'>
                 <Image
-                  className='z-10 h-28 w-28 object-cover sm:h-36 sm:w-36'
+                  className='h-28 w-28 object-cover sm:h-36 sm:w-36'
                   src='/pfp.jpg'
                   alt='foto de perfil'
                   width={144}
@@ -57,7 +57,7 @@ export default async function Page() {
               <SocialLinks />
             </div>
           </div>
-          <div className='flex justify-center m-5'>
+          <div className='flex justify-center mx-5'>
             <ListTechnologies />
           </div>
           <div className='flex justify-end my-5 mx-10'>
