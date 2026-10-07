@@ -57,7 +57,7 @@ export default async function Page() {
               <SocialLinks />
             </div>
           </div>
-          <div className='flex justify-between m-5'>
+          <div className='flex justify-center m-5'>
             <ListTechnologies />
           </div>
           <div className='flex justify-end my-5 mx-10'>
