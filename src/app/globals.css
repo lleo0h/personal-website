@@ -1,26 +1,26 @@
 @import 'tailwindcss';
 
 @layer base {
-  ::selection {
-    background-color: white;
-    color: black;
+  :root {
+    --background: #0d0d0d;
+    --foreground: #ededed;
   }
 
   html {
     scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
   }
-}
 
-:root {
-  --background: #0d0d0d;
-  --foreground: #ededed;
+  ::selection {
+    background-color: white;
+    color: black;
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 .bg-grid {
