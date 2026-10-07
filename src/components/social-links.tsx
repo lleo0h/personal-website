@@ -21,7 +21,7 @@ const links = [
     label: 'Steam',
     href: 'https://steamcommunity.com/id/lleo0h/',
     icon: (
-      <svg viewBox='0 0 24 24' fill='currentColor' aria-hidden='true'>
+      <svg viewBox='0 0 24 24' fill='currentColor' aria-hidden>
         <path d='M11.98 0A12 12 0 0 0 .26 9.45l6.45 2.67a3.39 3.39 0 0 1 1.93-.6l2.87-4.16v-.06a4.52 4.52 0 1 1 4.52 4.52h-.1l-4.09 2.92c0 .16-.02.32-.04.48a3.39 3.39 0 0 1-6.65.4L.54 13.71A12 12 0 1 0 11.98 0Zm-4.1 17.4-1.48-.61a2.54 2.54 0 0 0 4.67-.3 2.54 2.54 0 0 0-1.38-3.32l-1.53-.63a1.87 1.87 0 1 1-.28 4.86Zm8.15-7.09a3.02 3.02 0 1 0 0-6.04 3.02 3.02 0 0 0 0 6.04Zm0-.76a2.26 2.26 0 1 1 0-4.52 2.26 2.26 0 0 1 0 4.52Z' />
       </svg>
     )
@@ -40,12 +40,11 @@ export function SocialLinks() {
             className='group flex min-h-11 flex-col items-center justify-center gap-2 text-sm text-neutral-400 transition-colors duration-200 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:flex-row sm:gap-3 sm:text-base'
           >
             <span
-              aria-hidden='true'
-              className='flex h-10 w-8 shrink-0 rotate-12 items-center justify-center border border-neutral-600 p-1 text-foreground transition-all duration-200 ease-out group-hover:-translate-y-1 group-hover:rotate-0 group-hover:bg-white group-hover:text-black group-focus-visible:-translate-y-1 group-focus-visible:rotate-0 group-focus-visible:bg-white group-focus-visible:text-black'
+              aria-hidden
+              className='flex h-10 w-8 shrink-0 rotate-12 items-center justify-center border border-neutral-600 p-1 text-foreground transition-transform duration-300 ease-out group-hover:-translate-y-1 group-hover:rotate-0 group-hover:bg-white group-hover:text-black'
             >
               {link.icon}
             </span>
-
             {link.label}
           </a>
         </li>
