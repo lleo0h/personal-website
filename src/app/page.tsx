@@ -67,7 +67,7 @@ export default async function Page() {
           </div>
         </div>
       </div>
-      <div className='flex justify-end p-1'>
+      <div className='flex justify-end p-1 md:p-6'>
         <span className='font-mono text-sm text-white/30'>feito com next.js</span>
       </div>
     </InvestigateProvider>
