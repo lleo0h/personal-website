@@ -24,7 +24,7 @@ const technologies = [
 export function ListTechnologies() {
   return (
     <div className='w-full flex flex-col gap-4'>
-      <div className='grid grid-cols-2 gap-x-8 gap-y-6 md:grid-cols-4'>
+      <div className='grid grid-cols-2 gap-x-3 md:gap-x-8 gap-y-6 md:grid-cols-4'>
         {technologies.map((category) => (
           <div
             key={category.title}
