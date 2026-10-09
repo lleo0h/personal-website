@@ -1,5 +1,3 @@
-import type { CSSProperties } from 'react'
-
 function random(min: number, max: number) {
   return Math.random() * (max - min) + min
 }
@@ -12,7 +10,7 @@ function randomSign() {
   return Math.random() > 0.5 ? 1 : -1
 }
 
-function generateCards(count = 24) {
+export function generateCards(count = 24) {
   return Array.from({ length: count }, (_, index) => {
     return {
       id: index,
@@ -31,9 +29,9 @@ function generateCards(count = 24) {
   })
 }
 
-export function FallingCards() {
-  const cards = generateCards(15)
+export type Cards = ReturnType<typeof generateCards>
 
+export function FallingCards({ cards }: { cards: Cards }) {
   return (
     <div
       className='pointer-events-none absolute inset-0 -z-10 overflow-hidden mask-[linear-gradient(transparent,black_8%,black_92%,transparent)] motion-reduce:hidden'
@@ -59,7 +57,7 @@ export function FallingCards() {
               opacity: 'var(--card-opacity)',
               backgroundColor: `rgb(255 255 255 / ${card.background})`,
               borderColor: `rgb(255 255 255 / ${card.border})`
-            } as CSSProperties
+            } as React.CSSProperties
           }
         >
           <span className='absolute inset-0 border border-inherit shadow-[0_0_18px_rgba(255,255,255,0.015)]' />

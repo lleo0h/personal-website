@@ -4,9 +4,8 @@ function getDaysInMonth(year: number, month: number) {
   return new Date(year, month, 0).getDate()
 }
 
-export function Calendar() {
+export function Calendar({ date }: { date: Date }) {
   const t = useTranslations('Calendar')
-  const date = new Date()
   const year = date.getFullYear()
   const month = date.getMonth()
   const currentDay = date.getDate()

@@ -19,8 +19,8 @@
     "list": [
       "[x] - Definir os idiomas disponíveis",
       "[x] - Adicionar traduções",
-      "[ ] - Criar um seletor de idioma",
-      "[ ] - Salvar a preferência no cookie",
+      "[x] - Criar um seletor de idioma",
+      "[x] - Salvar a preferência no cookie",
       "[x] - Restaurar o idioma escolhido ao voltar ao site",
       "[x] - Criar a investigação inspirada em Danganronpa",
       "[x] - Exibir respostas com mensagens no estilo visual novel",
@@ -34,5 +34,8 @@
       "[ ] - Adicionar validação dos campos",
       "[ ] - Adicionar alguma proteção básica contra spam nos comentários"
     ]
+  },
+  "LocaleSwitch": {
+    "label": "Mudar idioma para inglês"
   }
 }

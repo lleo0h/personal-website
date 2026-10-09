@@ -19,8 +19,8 @@
     "list": [
       "[x] - Define available languages",
       "[x] - Add translations",
-      "[ ] - Create a language selector",
-      "[ ] - Save language preference in a cookie",
+      "[x] - Create a language selector",
+      "[x] - Save language preference in a cookie",
       "[x] - Restore the selected language when returning to the site",
       "[x] - Create a Danganronpa-inspired investigation",
       "[x] - Display responses as visual novel-style dialogue",
@@ -34,5 +34,8 @@
       "[ ] - Add field validation",
       "[ ] - Add basic spam protection for comments"
     ]
+  },
+  "LocaleSwitch": {
+    "label": "Switch language to Portuguese"
   }
 }
