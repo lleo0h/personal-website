@@ -1,14 +1,17 @@
+import { useTranslations } from 'next-intl'
+
 function getDaysInMonth(year: number, month: number) {
   return new Date(year, month, 0).getDate()
 }
 
 export function Calendar() {
+  const t = useTranslations('Calendar')
   const date = new Date()
   const year = date.getFullYear()
   const month = date.getMonth()
   const currentDay = date.getDate()
   const totalDays = getDaysInMonth(year, month + 1)
-  const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+  const weekDays = t.raw('weekDays') as string[]
   const firstWeekday = new Date(year, month, 1).getDay()
   const days: (number | null)[] = [
     ...Array.from({ length: firstWeekday }, () => null),

@@ -1,0 +1,38 @@
+{
+  "Page": {
+    "author": "leo",
+    "bio": "underground <highlight>full-stack</highlight> developer who has been making gadgets since 2022.",
+    "footer": {
+      "label": "made with next.js"
+    },
+    "Image": {
+      "alt": "profile picture"
+    }
+  },
+  "ViewCounter": {
+    "label": "view counter"
+  },
+  "Calendar": {
+    "weekDays": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+  },
+  "Todo": {
+    "list": [
+      "[x] - Define available languages",
+      "[x] - Add translations",
+      "[ ] - Create a language selector",
+      "[ ] - Save language preference in a cookie",
+      "[x] - Restore the selected language when returning to the site",
+      "[x] - Create a Danganronpa-inspired investigation",
+      "[x] - Display responses as visual novel-style dialogue",
+      "[ ] - Add a button to activate investigation mode",
+      "[ ] - Change the cursor over investigable areas while the button is held down",
+      "[ ] - Create a form with name and message fields",
+      "[ ] - Create the comments table using Drizzle",
+      "[ ] - Create API routes to submit and fetch comments",
+      "[ ] - Connect the form to the backend",
+      "[ ] - Display messages left by site visitors",
+      "[ ] - Add field validation",
+      "[ ] - Add basic spam protection for comments"
+    ]
+  }
+}

@@ -9,9 +9,11 @@ import { headers } from 'next/headers'
 import { SocialLinks } from '@/components/social-links'
 import { FallingCards } from '@/components/falling-cards'
 import { Todo } from '@/components/to-do'
+import { getTranslations } from 'next-intl/server'
 
 export default async function Page() {
   await connection()
+  const t = await getTranslations('Page')
   const { count } = await trackView(await headers())
 
   return (
@@ -38,7 +40,7 @@ export default async function Page() {
                 <Image
                   className='h-28 w-28 object-cover sm:h-36 sm:w-36'
                   src='/pfp.jpg'
-                  alt='foto de perfil'
+                  alt={t('Image.alt')}
                   width={144}
                   height={144}
                   loading='eager'
@@ -49,10 +51,11 @@ export default async function Page() {
               </span>
             </div>
             <div className='min-w-0 sm:self-end'>
-              <h1 className='text-4xl font-bold'>leo</h1>
+              <h1 className='text-4xl font-bold'>{t('author')}</h1>
               <p className='text-xs leading-5 text-white/70 sm:text-sm'>
-                programador <i className='text-white'>underground</i> full-stack que faz gadgets
-                desde 2022.
+                {t.rich('bio', {
+                  highlight: (chunks) => <i className='text-white'>{chunks}</i>
+                })}
               </p>
             </div>
             <div className='col-span-2 min-w-0 sm:col-span-1 sm:col-start-2 sm:self-start'>
@@ -68,7 +71,7 @@ export default async function Page() {
         </div>
       </div>
       <div className='flex justify-end p-1 md:p-6'>
-        <span className='font-mono text-sm text-white/30'>feito com next.js</span>
+        <span className='font-mono text-sm text-white/30'>{t('footer.label')}</span>
       </div>
     </InvestigateProvider>
   )
