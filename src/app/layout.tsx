@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { LocaleProvider, LocaleSwitch } from '@/components/locale'
-import { InvestigateProvider } from '@/components/investigate'
+import { InvestigateCommand, InvestigateProvider } from '@/components/investigate'
 import { defaultLocale, isLocale } from '@/i18n/locales'
 import { getLocale } from 'next-intl/server'
 
@@ -20,6 +20,7 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
         <LocaleProvider initialLocale={locale}>
           <InvestigateProvider>{children}</InvestigateProvider>
           <LocaleSwitch />
+          <InvestigateCommand />
         </LocaleProvider>
       </body>
     </html>

@@ -96,3 +96,29 @@ export function InvestigateDialog({ message }: InvestigateDialogProps) {
     </div>
   )
 }
+
+export function InvestigateCommand() {
+  return (
+    <div className='text-neutral-300 fixed bottom-[max(1.5rem,env(safe-area-inset-bottom))] right-6 hidden w-64 max-w-[calc(100vw-3rem)] flex-col sm:flex'>
+      <div className='flex flex-col'>
+        <span className='text-xl leading-none italic tracking-tight [text-shadow:2px_2px_0_#151525,0_0_3px_#151525]'>
+          Modo investigação
+        </span>
+        <div className='flex items-center gap-1'>
+          <span className='text-xs leading-none italic font-bold [text-shadow:1px_1px_0_#111]'>
+            Guia
+          </span>
+          <div className=' h-px flex-1 -skew-x-12 bg-white shadow-[1px_2px_0_#111]' />
+        </div>
+      </div>
+      <div className='mt-2 flex items-center justify-end gap-1'>
+        <span className='bg-neutral-600 italic flex size-6 items-center justify-center rounded-full border-2 border-white/80 text-[11px] leading-none shadow-[1px_1px_0_2px_#111]'>
+          Alt
+        </span>
+        <span className='text-lg leading-none tracking-tighter [text-shadow:2px_2px_0_#111,0_0_2px_#111]'>
+          segure para investigar
+        </span>
+      </div>
+    </div>
+  )
+}

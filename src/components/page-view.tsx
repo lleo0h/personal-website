@@ -66,7 +66,7 @@ export function PageView({ count, date, cards }: { count: number; date: Date; ca
           </div>
         </div>
       </div>
-      <div className='flex justify-end p-1 md:p-6 select-none pointer-events-none'>
+      <div className='flex justify-center p-1 md:pb-6 select-none pointer-events-none'>
         <span className='font-mono text-sm text-white/30'>{t('footer.label')}</span>
       </div>
     </div>
