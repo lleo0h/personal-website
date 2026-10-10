@@ -64,7 +64,11 @@ export function InvestigateArea({
     <button
       type='button'
       aria-label={label}
-      onClick={() => investigate({ message })}
+      onClick={(event) => {
+        if (event.altKey) {
+          investigate({ message })
+        }
+      }}
       className={className}
     >
       {children}
