@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import React, { createContext, useContext, useEffect, useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 const InvestigateContext = createContext<((dialog: InvestigateDialogProps) => void) | null>(null)
 
@@ -98,17 +99,19 @@ export function InvestigateDialog({ message }: InvestigateDialogProps) {
 }
 
 export function InvestigateCommand() {
+  const t = useTranslations('InvestigateCommand')
+
   return (
     <div className='text-neutral-300 fixed bottom-[max(1.5rem,env(safe-area-inset-bottom))] right-6 hidden w-64 max-w-[calc(100vw-3rem)] flex-col sm:flex'>
       <div className='flex flex-col'>
         <span className='text-xl leading-none italic tracking-tight [text-shadow:2px_2px_0_#151525,0_0_3px_#151525]'>
-          Modo investigação
+          {t('title')}
         </span>
         <div className='flex items-center gap-1'>
           <span className='text-xs leading-none italic font-bold [text-shadow:1px_1px_0_#111]'>
-            Guia
+            {t('guide')}
           </span>
-          <div className=' h-px flex-1 -skew-x-12 bg-white shadow-[1px_2px_0_#111]' />
+          <div className='h-px flex-1 -skew-x-12 bg-white shadow-[1px_2px_0_#111]' />
         </div>
       </div>
       <div className='mt-2 flex items-center justify-end gap-1'>
@@ -116,7 +119,7 @@ export function InvestigateCommand() {
           Alt
         </span>
         <span className='text-lg leading-none tracking-tighter [text-shadow:2px_2px_0_#111,0_0_2px_#111]'>
-          segure para investigar
+          {t('hold')}
         </span>
       </div>
     </div>

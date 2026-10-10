@@ -37,5 +37,10 @@
   },
   "LocaleSwitch": {
     "label": "Mudar idioma para inglês"
+  },
+  "InvestigateCommand": {
+    "title": "Modo investigação",
+    "guide": "Guia",
+    "hold": "segure para investigar"
   }
 }
