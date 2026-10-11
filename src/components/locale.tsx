@@ -38,7 +38,7 @@ export function LocaleProvider({
 
 export function useSetLocale() {
   const context = useContext(LocaleContext)
-  if (!context) throw new Error('LocaleProvider não encontrado')
+  if (!context) throw new Error('useSetLocale must be used within a LocaleProvider')
   return context
 }
 
