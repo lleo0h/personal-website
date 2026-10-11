@@ -10,6 +10,8 @@ RUN pn ci
 
 COPY . .
 
+RUN pn kubb generate
+
 RUN pn build
 
 CMD ["pn", "start"]
