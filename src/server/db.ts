@@ -1,5 +1,5 @@
 import { env } from './env'
-import { sql, eq, and, desc, lt } from 'drizzle-orm'
+import { sql, eq, and, asc, lt } from 'drizzle-orm'
 import { drizzle } from 'drizzle-orm/node-postgres'
 import {
   integer,
@@ -82,7 +82,7 @@ export async function readMessages({ limit, status, referenceStatus, cursor }: M
         cursor !== undefined ? lt(schema.messages.id, cursor) : undefined
       )
     )
-    .orderBy(desc(schema.messages.id))
+    .orderBy(asc(schema.messages.id))
     .limit(limit + 1)
 
   const hasMore = r.length > limit
