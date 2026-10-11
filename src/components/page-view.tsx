@@ -8,8 +8,22 @@ import { ListTechnologies } from './list-technologies'
 import { Todo } from './to-do'
 import { Calendar } from './calendar'
 import { FallingCards, type Cards } from './falling-cards'
+import { Guestbook, type Message } from './guestbook'
 
-export function PageView({ count, date, cards }: { count: number; date: Date; cards: Cards }) {
+export function PageView({
+  count,
+  date,
+  cards,
+  message
+}: {
+  count: number
+  date: Date
+  cards: Cards
+  message: {
+    items: Message[]
+    nextCursor: string | null
+  }
+}) {
   const t = useTranslations('Page')
 
   return (
@@ -61,7 +75,8 @@ export function PageView({ count, date, cards }: { count: number; date: Date; ca
           <div className='flex justify-center mx-3 md:mx-5 mb-10'>
             <ListTechnologies />
           </div>
-          <div className='flex justify-end my-5 mx-10'>
+          <div className='flex flex-wrap justify-around my-5 mx-10 gap-y-15'>
+            <Guestbook messages={message.items} />
             <Calendar date={date} />
           </div>
         </div>

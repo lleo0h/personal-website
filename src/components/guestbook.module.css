@@ -1,0 +1,33 @@
+.viewport {
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: #ededed #525252;
+}
+
+@supports selector(::-webkit-scrollbar) {
+  .viewport {
+    scrollbar-width: auto;
+    scrollbar-color: auto;
+  }
+
+  .viewport::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .viewport::-webkit-scrollbar-track {
+    background: #525252;
+    margin-top: 200px;
+    margin-bottom: 0;
+  }
+
+  .viewport::-webkit-scrollbar-thumb {
+    min-height: 36px;
+    border: 1px solid #525252;
+    border-radius: 0;
+    background: #ededed;
+  }
+
+  .viewport::-webkit-scrollbar-thumb:hover {
+    background: #fff;
+  }
+}
