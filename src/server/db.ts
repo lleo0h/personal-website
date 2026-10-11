@@ -48,8 +48,8 @@ const referencedMessage = alias(schema.messages, 'referenced_message')
 
 export type MessageFilters = {
   limit: number
-  status: (typeof messageStatus.enumValues)[number]
-  referenceStatus: (typeof messageStatus.enumValues)[number]
+  status?: (typeof messageStatus.enumValues)[number]
+  referenceStatus?: (typeof messageStatus.enumValues)[number]
   cursor?: string
 }
 
@@ -73,11 +73,14 @@ export async function readMessages({ limit, status, referenceStatus, cursor }: M
       referencedMessage,
       and(
         eq(schema.messages.referenceId, referencedMessage.id),
-        eq(referencedMessage.status, referenceStatus)
+        referenceStatus !== undefined ? eq(referencedMessage.status, referenceStatus) : undefined
       )
     )
     .where(
-      and(eq(schema.messages.status, status), cursor ? lt(schema.messages.id, cursor) : undefined)
+      and(
+        status !== undefined ? eq(schema.messages.status, status) : undefined,
+        cursor !== undefined ? lt(schema.messages.id, cursor) : undefined
+      )
     )
     .orderBy(desc(schema.messages.id))
     .limit(limit + 1)
