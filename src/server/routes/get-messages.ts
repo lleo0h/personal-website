@@ -4,14 +4,14 @@ import { readMessages } from '../db'
 
 export const getMessages = new Elysia().get(
   '/messages',
-  async ({ params }) =>
+  async ({ query }) =>
     readMessages({
-      limit: params.limit,
+      limit: query.limit,
       status: 'approved',
       referenceStatus: 'approved'
     }),
   {
-    params: z.object({
+    query: z.object({
       limit: z.coerce.number().int().min(1).max(100),
       cursor: z.string().optional()
     })
