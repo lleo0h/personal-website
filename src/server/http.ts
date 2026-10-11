@@ -1,21 +1,11 @@
 import { Elysia } from 'elysia'
 import { openapi, fromTypes } from '@elysia/openapi'
+import { getMessages } from './routes/get-messages'
 import { getViews } from './routes/get-views'
-// import { incrementViews } from './routes/increment-views'
+import { sendMessage } from './routes/send-message'
 
 export const http = new Elysia({ prefix: '/api' })
-  .get('/', () => ({ message: 'Hello World' }))
+  .use(getMessages)
   .use(getViews)
-  // .use(incrementViews)
-  .use(
-    openapi({
-      references: fromTypes('src/server/http.ts'),
-      documentation: {
-        info: {
-          title: '',
-          description: '',
-          version: ''
-        }
-      }
-    })
-  )
+  .use(sendMessage)
+  .use(openapi({ references: fromTypes('src/server/http.ts') }))
