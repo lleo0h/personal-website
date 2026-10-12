@@ -42,10 +42,6 @@ export function PageView({
                 className='animate-[spin_7s_linear_infinite] absolute -inset-2 rotate-3 border border-white/15'
                 aria-hidden
               />
-              <div
-                className='animate-[spin_4s_linear_infinite_reverse] absolute -inset- rotate-3 border border-white/15'
-                aria-hidden
-              />
               <div className='relative z-0 transition-transform duration-300 hover:scale-115'>
                 <Image
                   className='h-28 w-28 object-cover sm:h-36 sm:w-36'
