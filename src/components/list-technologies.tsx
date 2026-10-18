@@ -28,7 +28,7 @@ export function ListTechnologies() {
         {technologies.map((category) => (
           <div
             key={category.title}
-            className='hover:selection:bg-black hover:selection:text-white group relative min-h-72 overflow-hidden cursor-pointer border border-white/10 bg-neutral-900 transition-all duration-300 hover:scale-105 hover:border-white hover:bg-white hover:text-black hover:shadow-[10px_10px_0px_rgba(255,255,255,0.18)]'
+            className='hover:selection:bg-black hover:selection:text-white group relative min-h-72 overflow-hidden border border-white/10 bg-neutral-900 transition-all duration-300 hover:scale-105 hover:border-white hover:bg-white hover:text-black hover:shadow-[10px_10px_0px_rgba(255,255,255,0.18)]'
           >
             {category.decoration === 'diamond' && (
               <>
