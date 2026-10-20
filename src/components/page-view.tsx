@@ -37,12 +37,12 @@ export function PageView({
             <ViewCounter count={count} />
           </div>
           <div className='grid grid-cols-[auto_minmax(0,1fr)] items-center gap-x-5 gap-y-7 p-2 m-4 sm:gap-y-2'>
-            <div className='relative shrink-0 sm:row-span-2'>
+            <div className='group relative shrink-0 sm:row-span-2'>
               <div
-                className='animate-[spin_7s_linear_infinite] absolute -inset-2 rotate-3 border border-white/15'
+                className='duration-300 group-hover:scale-110 animate-[spin_7s_linear_infinite] absolute -inset-2 rotate-3 border border-white/15'
                 aria-hidden
               />
-              <div className='relative z-0 transition-transform duration-300 hover:scale-115'>
+              <div className='relative z-0 transition-transform duration-300 group-hover:scale-115'>
                 <Image
                   className='h-28 w-28 object-cover sm:h-36 sm:w-36'
                   src='/pfp.jpg'
