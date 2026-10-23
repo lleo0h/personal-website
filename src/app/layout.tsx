@@ -18,9 +18,11 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
     <html lang={locale} className={`site-shell ${inter.className} h-full antialiased`}>
       <body className='min-h-dvh bg-background text-foreground'>
         <LocaleProvider initialLocale={locale}>
-          <InvestigateProvider>{children}</InvestigateProvider>
-          <LocaleSwitch />
-          <InvestigateCommand />
+          <InvestigateProvider>
+            {children}
+            <LocaleSwitch />
+            <InvestigateCommand />
+          </InvestigateProvider>
         </LocaleProvider>
       </body>
     </html>

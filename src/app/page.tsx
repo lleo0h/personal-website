@@ -10,7 +10,9 @@ export default async function Page() {
   const [{ count }, message] = await Promise.all([
     trackView(await headers()),
     readMessages({
-      limit: 10
+      limit: 10,
+      status: 'approved',
+      referenceStatus: 'approved'
     })
   ])
   const date = new Date()
